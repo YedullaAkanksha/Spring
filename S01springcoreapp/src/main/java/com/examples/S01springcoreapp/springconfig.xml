@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans.xsd
+   http://www.springframework.org/schema/context
+   http://www.springframework.org/schema/context/spring-context.xsd">
+
+ <bean name="emp1" class="com.examples.S01springcoreapp.Employee">
+  <property name="id" value="01">
+  </property>
+<property name="name" value="Max">
+ 
+  </property>
+  
+ </bean>
+ <bean name="emp2" class="com.examples.S01springcoreapp.Employee">
+  <property name="id" value="02">
+  </property>
+<property name="name">
+  <value>Will</value>
+  </property>
+  
+ </bean>
+<bean name="emp3" class="com.examples.S01springcoreapp.Employee" p:id="3" p:name="Akki">
+ </bean>
+ <bean name="emp4" class="com.examples.S01springcoreapp.Employee" p:id="4" p:name="Ron">
+  <property name="department">
+  	<list>
+ 		 <value>HR</value>
+  		 <value>Admin</value>
+ 	 </list>
+  </property></bean>
+  
+  <bean name="emp5" class="com.examples.S01springcoreapp.Employee" p:id="5" p:name="Tom">
+  <property name="products">
+  	<map>
+  	<entry key="11" value="laptop"/>
+  	<entry key="12" value="Tv"/></map>
+ 		 
+  </property></bean>
+  
+   <bean name="emp6" class="com.examples.S01springcoreapp.Employee" p:id="6" p:name="Harry">
+  <property name="countriesLang">
+  	<props>
+  	<prop key="USA">English</prop>
+  	<prop key="Canada">French</prop></props>
+ 		 
+  </property></bean>
+  <bean name="add" class="com.examples.S01springcoreapp.Address" p:city="hyd" p:state="Ts" p:pincode="123" ></bean>
+  <bean name="emp7" class="com.examples.S01springcoreapp.Employee" p:id="7" p:name="Rach">
+  <property name="Address">
+  	<ref bean="add"/>
+  </property></bean>
+  
+  <bean name="emp8" class="com.examples.S01springcoreapp.Employee" p:id="8" p:name="Item" p:price="2000" p:quantity="1">
+  </bean>
+</beans>
